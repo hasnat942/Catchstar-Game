@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mining Game</title>
+    <title>Clicker Game</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        #clicker { font-size: 24px; margin-top: 20px; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Mining Game!</h1>
-    <p>Start tapping and earn rewards!</p>
+    <h1>Clicker Game</h1>
+    <p id="counter">Clicks: 0</p>
+    <button id="clicker">Click Me!</button>
+    <script>
+        let count = 0;
+        const counter = document.getElementById('counter');
+        const clicker = document.getElementById('clicker');
+
+        clicker.addEventListener('click', () => {
+            count++;
+            counter.textContent = `Clicks: ${count}`;
+        });
+    </script>
 </body>
 </html>
+
