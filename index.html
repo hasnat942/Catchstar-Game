@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clicker Game</title>
-    <style>
-        body { text-align: center; font-family: Arial, sans-serif; }
-        #clicker { font-size: 24px; margin-top: 20px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catchstar Mine to Earn </title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Clicker Game</h1>
-    <p id="counter">Clicks: 0</p>
-    <button id="clicker">Click Me!</button>
-    <script>
-        let count = 0;
-        const counter = document.getElementById('counter');
-        const clicker = document.getElementById('clicker');
+  <div class="container">
+    <h1>Catchstar Mine to Earn</h1>
+    <div id="coins">0</div>
 
-        clicker.addEventListener('click', () => {
-            count++;
-            counter.textContent = `Clicks: ${count}`;
-        });
-    </script>
+    <button id="checkInButton">Daily Check-In</button>
+    <input type="text" id="referralLink" readonly>
+    <button id="copyReferralLink">Copy Referral Link</button>
+    <div id="referralMessage"></div>
+    <div id="userId">Your ID: </div>
+
+    <div class="social-rewards">
+      <h2>Social Tasks & Rewards</h2>
+      <button id="socialTask1">Complete Task 1 - 125 Tokens</button>
+      <button id="socialTask2">Complete Task 2 - 125 Tokens</button>
+      <button id="socialTask3">Complete Task 3 - 125 Tokens</button>
+    </div>
+
+    <button id="settingsButton">Profile Settings</button>
+  </div>
+
+  <!-- Settings Modal -->
+  <div id="settingsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Profile Settings</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="telegramWallet">Telegram Wallet Address:</label>
+      <input type="text" id="telegramWallet" required>
+      <button id="saveSettings">Save Settings</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-</html>
 
+</html>
